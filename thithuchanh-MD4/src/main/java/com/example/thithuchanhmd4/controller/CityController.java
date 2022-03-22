@@ -48,7 +48,7 @@ public class CityController {
     public ModelAndView showDetail(@PathVariable("id") Long id) {
         ModelAndView modelAndView = new ModelAndView("city/detail");
         Optional<City> city = cityService.findById(id);
-        city.ifPresent(value -> modelAndView.addObject("student", value));
+        city.ifPresent(value -> modelAndView.addObject("cities", value));
         return modelAndView;
     }
 

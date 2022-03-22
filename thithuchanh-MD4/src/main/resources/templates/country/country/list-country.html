@@ -14,7 +14,7 @@
     </tr>
     <tr th:each="c : ${country}">
         <td th:text="${c.getId()}"></td>
-        <td><a th:href="@{/country/city-in(country_id=${c.getId()})}" th:text="${c.getName()}"></a></td>
+        <td><a th:href="@{/templates/country/city-in(country_id=${c.getId()})}" th:text="${c.getName()}"></a></td>
     </tr>
 </table>
 <a th:href="@{/city}">Back to home</a>

@@ -33,7 +33,7 @@
 </table>
 <br>
 <div>
-    <a th:href="@{/country/country-in(page=${cities.number - 1},countr_id=${country_id})}"
+    <a th:href="@{/templates/country/country-in(page=${cities.number - 1},countr_id=${country_id})}"
        th:if="${cities.hasPrevious()}"><span>Previous</span></a>
     <span th:text="${cities.number + 1} + '/' + ${cities.totalPages}"></span>
     <a th:href="@{/classroom/country-in(page=${cities.number + 1},country_id=${country_id})}"

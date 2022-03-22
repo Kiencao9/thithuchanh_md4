@@ -1,6 +1,7 @@
 package com.example.thithuchanhmd4.service;
 
 import com.example.thithuchanhmd4.model.City;
+import com.example.thithuchanhmd4.model.Country;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -17,4 +18,6 @@ public interface ICityService {
     Optional<City> findById(Long id);
 
     Page<City> findByName(Pageable pageable, String name);
+
+    Page<City>findAllByCountry(Pageable pageable, Country country);
 }

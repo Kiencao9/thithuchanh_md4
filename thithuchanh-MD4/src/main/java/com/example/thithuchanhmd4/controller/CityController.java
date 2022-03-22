@@ -15,7 +15,7 @@ import org.springframework.web.servlet.ModelAndView;
 import java.util.Optional;
 
 @Controller
-
+@RequestMapping("/city")
 public class CityController {
     @Autowired
     private ICityService cityService;
@@ -23,7 +23,7 @@ public class CityController {
     @Autowired
     private ICountryService countryService;
 
-    @ModelAttribute(name = "cities")
+    @ModelAttribute(name = "country")
     private Iterable<Country> findAll() {
         return countryService.findAll();
     }

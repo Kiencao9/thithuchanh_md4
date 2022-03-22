@@ -1,6 +1,7 @@
 package com.example.thithuchanhmd4.service.impl;
 
 import com.example.thithuchanhmd4.model.City;
+import com.example.thithuchanhmd4.model.Country;
 import com.example.thithuchanhmd4.repository.ICityRepository;
 import com.example.thithuchanhmd4.service.ICityService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +39,10 @@ public class CityService implements ICityService {
     @Override
     public Page<City> findByName(Pageable pageable, String name) {
         return repository.findAllByNameContaining(pageable, name);
+    }
+
+    @Override
+    public Page<City> findAllByCountry(Pageable pageable, Country country) {
+        return repository.findByCountry(pageable,country);
     }
 }
